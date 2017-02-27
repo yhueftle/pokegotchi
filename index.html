@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<!--   dependencies -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap-tpls.min.js"></script>
+  <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>  
+  
+<title>Pokegachi</title>
+</head>
+<body data-ng-app = "myApp">
+  <div data-ui-view>
+    <h1>Welcome to Pokegachi!</h1>
+    <div class = "row">
+      <button data-ui-sref = "createNew" class = "btn">Make A New Pokegachi</button`>
+      <button data-ui-sref = "home" class = "btn">Retrieve Current Pokegachi</button>
+    </div>
+  </div>
+  
+  <script src = "app.js"></script>
+  <script src = "controllers.js"></script>
+  <script src = "services.js"></script>
+</body>
+</html>

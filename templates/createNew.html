@@ -1,0 +1,9 @@
+
+<div data-ui-view>
+  <div data-ng-controller="RequestPokemonController as muffins">
+    Enter the type of Pokegachi: <input data-ng-model="pokemonName" type="text" placeholder="Pokemon" required autofocus/>
+    <button data-ng-click="muffins.getPokemon(pokemonName)">Submit</button>
+    <div>{{muffins.pokemonObj.name}}</div>
+    <button data-ui-sref = "home" class = "btn">Retrieve Current Pokegachi</button> 
+  </div>
+</div>
