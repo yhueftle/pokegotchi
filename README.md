@@ -1,0 +1,2 @@
+# pokegotchi
+My pokegotchi project
