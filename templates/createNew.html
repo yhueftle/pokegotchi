@@ -1,8 +1,8 @@
 
 <div data-ui-view>
-  <div data-ng-controller="RequestPokemonController as muffins">
-    Enter the type of Pokegachi: <input data-ng-model="pokemonName" type="text" placeholder="Pokemon" required autofocus/>
-    <button data-ng-click="muffins.getPokemon(pokemonName)">Submit</button>
+  <div data-ng-controller="RequestPokemonController as muffins" class="container text-center">
+    Enter the type of Pokegachi: <input data-ng-model="muffins.pokemonName"  data-ng-keypress="muffins.enter($event)" type="text" placeholder="Pokemon" required autofocus/>
+    <button data-ng-click="muffins.getPokemon(muffins.pokemonName)" class="btn btn-danger">Submit</button>
     <div>{{muffins.pokemonObj.name || muffins.notfound}}</div>
     <div>
       <img alt="le poof" data-ng-show="muffins.image" data-ng-src="{{muffins.image}}"/>
