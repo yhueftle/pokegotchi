@@ -5,10 +5,14 @@ app.controller('RequestPokemonController', ['$scope', 'pokeApi', '$http', functi
 	self.pokeApi=pokeApi;
 	self.pokemonName;
 	self.getPokemon = function(pokemonName){
+		self.pokemonObj = null;
+		self.image = null;
 		var promise = pokeApi.requestPokemon(pokemonName).then(function(response){
 			self.pokemonObj = response;
+			self.image = self.pokemonObj.sprites.front_default;
 		}, function(response){
 			self.pokemonObj = null;
+			self.notfound = 'pokemon not found';
 		});
 	};
 }]);
